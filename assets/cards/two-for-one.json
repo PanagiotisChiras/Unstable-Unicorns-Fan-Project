@@ -1,0 +1,9 @@
+{
+  "name": "TWO-FOR-ONE",
+  "cardType": "Magic",
+  "quantity": 3,
+  "effectDescription": "SACRIFICE a card, then DESTROY 2 cards.",
+  "effects": {
+    "onPlay" : "TWO_FOR_ONE_EFFECT"
+  }
+}

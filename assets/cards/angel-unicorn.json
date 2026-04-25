@@ -1,0 +1,9 @@
+{
+  "name": "ANGEL UNICORN",
+  "cardType": "Magic_Unicorn",
+  "quantity": 1,
+  "effectDescription": "If this card is in your Stable at the beginning of your turn, you may SACRIFICE this card. If you do, choose a Unicorn card from the discard pile and bring it directly into your Stable.",
+  "effects": {
+    "onBeginningOfTurn" : "ANGEL_UNICORN_BOT"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "SEDUCTIVE UNICORN",
+  "cardType": "Magic_Unicorn",
+  "quantity": 1,
+  "effectDescription": "When this card enters your Stable, STEAL a Unicorn card. If this card leaves your Stable, return that Unicorn card to the Stable from which you stole it.",
+  "effects": {
+    "onEnter" : "SEDUCTIVE_UNICORN_EFFECT"
+  }
+}

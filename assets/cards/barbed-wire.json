@@ -1,0 +1,9 @@
+{
+  "name": "BARBED WIRE",
+  "cardType": "Downgrade",
+  "quantity": 1,
+  "effectDescription": "Each time a Unicorn card enters or leaves\nyour Stable, DISCARD a card.",
+  "effects": {
+    "onEnter" : "BARBED_WIRE_EFFECT"
+  }
+}

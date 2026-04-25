@@ -1,0 +1,9 @@
+{
+  "name": "UNICORN_PHOENIX",
+  "cardType": "Magic_Unicorn",
+  "quantity": 1,
+  "effectDescription": "When this card enters your Stable, DISCARD\na card. if this card is sacrificed or destroyed,\nbring it directly back into your Stable if you\n have at least 1 card in your hand..",
+  "effects": {
+    "onEnter" : "UNICORN_PHOENIX_EFFECT"
+  }
+}

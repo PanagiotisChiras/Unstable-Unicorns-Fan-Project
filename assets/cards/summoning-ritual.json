@@ -1,0 +1,9 @@
+{
+  "name": "SUMMONING RITUAL",
+  "cardType": "Upgrade",
+  "quantity": 1,
+  "effectDescription": "If this card is in your Stable at the beginning of your turn, you may DISCARD 2 Unicorn cards. If you do, bring a Unicorn card directly from the discard pile into your Stable.",
+  "effects": {
+    "onBeginningOfTurn" : "SUMMONING_RITUAL_BOT"
+  }
+}

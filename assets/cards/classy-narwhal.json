@@ -1,0 +1,9 @@
+{
+  "name": "CLASSY NARWHAL",
+  "cardType": "Magic_Unicorn",
+  "quantity": 1,
+  "effectDescription": "When this card enters your Stable, you may\nsearch the deck for an Upgrade card and\nadd it to your hand. Shuffle the deck.",
+  "effects": {
+    "onEnter" : "CLASSY_NARWHAL_EFFECT"
+  }
+}

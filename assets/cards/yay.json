@@ -1,0 +1,9 @@
+{
+  "name": "YAY",
+  "cardType": "Upgrade",
+  "quantity": 1,
+  "effectDescription": "Your cards cannot be Neighed",
+  "effects": {
+    "onEnter" : "YAY_EFFECT"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "CHANCE OF LUCK",
+  "cardType": "Magic",
+  "quantity": 3,
+  "effectDescription": "DRAW 2 cards and DISCARD 3 cards, then\ntake another turn.",
+  "effects": {
+    "onPlay" : "CHANCE_OF_LUCK_EFFECT"
+  }
+}

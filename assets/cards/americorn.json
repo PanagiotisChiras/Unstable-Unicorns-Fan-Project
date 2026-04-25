@@ -1,0 +1,9 @@
+{
+  "name": "AMERICORN",
+  "cardType": "Magic_Unicorn",
+  "quantity": 1,
+  "effectDescription": "When this card enters your Stable, choosen any player. Pull a card from that player's\n hand.",
+  "effects": {
+    "onEnter" : "AMERICORN_EFFECT"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "TINY STABLE",
+  "cardType": "Downgrade",
+  "quantity": 1,
+  "effectDescription": "if at any time you have more than 5 Unicorns in your Stable, SACRIFICE a Unicorn card",
+  "effects": {
+    "onEnter" : "TINY_STABLE_EFFECT"
+  }
+}

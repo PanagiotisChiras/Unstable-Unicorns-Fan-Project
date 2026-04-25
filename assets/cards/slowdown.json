@@ -1,0 +1,9 @@
+{
+  "name": "SLOWDOWN",
+  "cardType": "Downgrade",
+  "quantity": 1,
+  "effectDescription": "You cannot play Instant Cards",
+  "effects": {
+    "onEnter" : "SLOWDOWN_EFFECT"
+  }
+}

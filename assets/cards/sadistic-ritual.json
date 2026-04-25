@@ -1,0 +1,10 @@
+{
+  "name": "SADISTIC RITUAL",
+  "cardType": "Downgrade",
+  "quantity": 1,
+  "effectDescription": "If this card is in your Stable at the beginning of your turn, SACRIFICE a Unicorn card, then DRAW a card.",
+  "effects": {
+    "onBeginningOfTurn" : "SADISTIC_RITUAL_BOT",
+    "mandatoryEffect" : ""
+  }
+}

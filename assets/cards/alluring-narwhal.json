@@ -1,0 +1,9 @@
+{
+  "name": "ALLURING NARWHAL",
+  "cardType": "Magic_Unicorn",
+  "quantity": 1,
+  "effectDescription": "When this card enters your Stable, you may\n STEAL an Upgrade card.",
+  "effects": {
+    "onEnter" : "ALLURING_NARWHAL_EFFECT"
+  }
+}

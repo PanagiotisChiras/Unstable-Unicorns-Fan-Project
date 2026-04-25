@@ -1,0 +1,9 @@
+{
+  "name": "MYSTICAL VORTEX",
+  "cardType": "Magic",
+  "quantity": 3,
+  "effectDescription": "Each player must DISCARD  a card. Shuffle the discard pile into the deck.",
+  "effects": {
+    "onPlay" : "MYSTICAL_VORTEX_EFFECT"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "BLINDING_LIGHT",
+  "cardType": "Downgrade",
+  "quantity": 1,
+  "effectDescription": "As long as this card is in your Stable, your Unicorn card effects cannot be activated.",
+  "effects": {
+    "onEnter" : "BLINDING_LIGHT_EFFECT"
+  }
+}

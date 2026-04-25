@@ -1,0 +1,9 @@
+{
+  "name": "MERMAID UNICORN",
+  "cardType": "Magic_Unicorn",
+  "quantity": 1,
+  "effectDescription": "When this card enters your Stable, you may choose any player. Return a card in that player's Stable to their hand.",
+  "effects": {
+    "onEnter" : "MERMAID_UNICORN_EFFECT"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "MAGICAL KITTENCORN",
+  "cardType": "Magic_Unicorn",
+  "quantity": 1,
+  "effectDescription": "This card cannot be destroyed by effects of Magic Cards",
+  "effects": {
+    "onEnter" : "MAGICAL_KITTENCORN_EFFECT"
+  }
+}

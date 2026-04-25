@@ -1,0 +1,9 @@
+{
+  "name": "BACK_KICK",
+  "cardType": "Magic",
+  "quantity": 3,
+  "effectDescription": "Choose any Player. Return a card in that\nplayer's Stable to their hand. That player\nmust DISCARD a card..",
+  "effects": {
+    "onPlay" : "BACK_KICK_EFFECT"
+  }
+}

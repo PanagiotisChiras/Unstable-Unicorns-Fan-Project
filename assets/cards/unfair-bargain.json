@@ -1,0 +1,9 @@
+{
+  "name": "UNFAIR BARGAIN",
+  "cardType": "Magic",
+  "quantity": 3,
+  "effectDescription": "Trade hands with any other player.",
+  "effects": {
+    "onPlay" : "UNFAIR_BARGAIN_EFFECT"
+  }
+}

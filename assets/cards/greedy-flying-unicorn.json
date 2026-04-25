@@ -1,0 +1,9 @@
+{
+  "name": "GREEDY FLYING UNICORN",
+  "cardType": "Magic_Unicorn",
+  "quantity": 1,
+  "effectDescription": "When this card enters your Stable,DRAW a card. if this card would be sacrificed or destroyed, return it to your hand instead.",
+  "effects": {
+    "onEnter" : "GREEDY_FLYING_UNICORN_EFFECT"
+  }
+}

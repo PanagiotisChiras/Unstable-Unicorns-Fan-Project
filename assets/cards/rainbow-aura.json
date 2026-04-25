@@ -1,0 +1,9 @@
+{
+  "name": "RAINBOW AURA",
+  "cardType": "Upgrade",
+  "quantity": 1,
+  "effectDescription": "Your Unicorn cards cannot be destroyed.",
+  "effects": {
+    "onEnter" : "RAINBOW_AURA_EFFECT"
+  }
+}

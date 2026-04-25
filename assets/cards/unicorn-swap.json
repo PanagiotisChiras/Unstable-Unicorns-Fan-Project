@@ -1,0 +1,9 @@
+{
+  "name": "UNICORN SWAP",
+  "cardType": "Magic",
+  "quantity": 2,
+  "effectDescription": "Move a Unicorn card in your Stable to any other player's Stable, then STEAL a Unicorn card from that player's Stable.",
+  "effects": {
+    "onPlay" : "UNICORN_SWAP_EFFECT"
+  }
+}

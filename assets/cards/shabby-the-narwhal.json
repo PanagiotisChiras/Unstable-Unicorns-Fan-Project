@@ -1,0 +1,9 @@
+{
+  "name": "SHABBY THE NARWHAL",
+  "cardType": "Magic_Unicorn",
+  "quantity": 1,
+  "effectDescription": "When this card enters your Stable, search the deck for a Downgrade card and\n add it to your hand. Shuffle the deck.",
+  "effects": {
+    "onEnter" : "SHABBY_THE_NARWHAL_EFFECT"
+  }
+}

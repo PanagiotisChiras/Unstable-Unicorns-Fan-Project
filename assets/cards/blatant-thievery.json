@@ -1,0 +1,9 @@
+{
+  "name": "BLATANT THIEVERY",
+  "cardType": "Magic",
+  "quantity": 1,
+  "effectDescription": "Choose any player and look at that player's hand. Choose a card from that player's hand and add it to your hand.",
+  "effects": {
+    "onPlay" : "BLATANT_THIEVERY_EFFECT"
+  }
+}

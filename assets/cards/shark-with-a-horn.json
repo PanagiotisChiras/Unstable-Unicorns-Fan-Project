@@ -1,0 +1,9 @@
+{
+  "name": "SHARK WITH A HORN",
+  "cardType": "Magic_Unicorn",
+  "quantity": 1,
+  "effectDescription": "When this card enters your Stable, You may\nSACRIFICE this card. if you do, DESTROY a\n Unicorn Card.",
+  "effects": {
+    "onEnter" : "SHARK_WITH_A_HORN_EFFECT"
+  }
+}

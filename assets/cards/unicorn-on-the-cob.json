@@ -1,0 +1,9 @@
+{
+  "name": "UNICORN_ON_THE_COB",
+  "cardType": "Magic_Unicorn",
+  "quantity": 1,
+  "effectDescription": "When this card enters your Stable, DRAW 2\n cards and DISCARD a card.",
+  "effects": {
+    "onEnter" : "UNICORN_ON_THE_COB_EFFECT"
+  }
+}

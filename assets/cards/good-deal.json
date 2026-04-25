@@ -1,0 +1,9 @@
+{
+  "name": "GOOD DEAL",
+  "cardType": "Magic",
+  "quantity": 1,
+  "effectDescription": "DRAW 3 cards and DISCARD a card.",
+  "effects": {
+    "onPlay" : "GOOD_DEAL_EFFECT"
+  }
+}

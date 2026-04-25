@@ -1,0 +1,9 @@
+{
+  "name": "ANNOYING FLYING UNICORN",
+  "cardType": "Magic_Unicorn",
+  "quantity": 1,
+  "effectDescription": "When this card enters your Stable, you may choose any player. That\nplayer must DISCARD a card. If this card would be sacrificed or\ndestroyed, return it to your hand instead.",
+  "effects": {
+    "onEnter" : "ANNOYING_FLYING_UNICORN_EFFECT"
+  }
+}

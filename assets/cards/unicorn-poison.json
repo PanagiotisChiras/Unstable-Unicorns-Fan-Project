@@ -1,0 +1,9 @@
+{
+  "name": "UNICORN_POISON",
+  "cardType": "Magic",
+  "quantity": 3,
+  "effectDescription": "DESTROY a Unicorn Card.",
+  "effects": {
+    "onPlay" : "UNICORN_POISON_EFFECT"
+  }
+}

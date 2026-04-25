@@ -1,0 +1,9 @@
+{
+  "name": "MAJESTIC FLYING UNICORN",
+  "cardType": "Magic_Unicorn",
+  "quantity": 1,
+  "effectDescription": "When this card enters your Stable, choose a\nUnicorn card from the discard pile\nand add it to your hand. if this card would\n be sacrificed or destroyed, return it to your\nhand instead.",
+  "effects": {
+    "onEnter" : "MAJESTIC_FLYING_UNICORN_EFFECT"
+  }
+}

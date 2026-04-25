@@ -1,0 +1,9 @@
+{
+  "name": "BROKEN_STABLE",
+  "cardType": "Downgrade",
+  "quantity": 1,
+  "effectDescription": "You cannot play Upgrade cards.",
+  "effects": {
+    "onEnter" : "BROKEN_STABLE_EFFECT"
+  }
+}

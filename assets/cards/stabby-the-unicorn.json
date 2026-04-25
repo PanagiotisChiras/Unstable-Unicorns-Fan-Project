@@ -1,0 +1,9 @@
+{
+  "name": "STABBY THE UNICORN",
+  "cardType": "Magic_Unicorn",
+  "quantity": 1,
+  "effectDescription": "if this card is sacrificed or destroyed, DESTROY a Unicorn CARD.",
+  "effects": {
+    "onEnter" : "STABBY_THE_UNICORN_EFFECT"
+  }
+}

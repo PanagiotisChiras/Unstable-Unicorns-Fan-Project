@@ -1,0 +1,9 @@
+{
+  "name": "NARWHAL TORPEDO",
+  "cardType": "Magic_Unicorn",
+  "quantity": 1,
+  "effectDescription": "When this card enters your Stable, SACRIFICE all Downgrade cards.",
+  "effects": {
+    "onEnter" : "NARWHAL_TORPEDO_EFFECT"
+  }
+}

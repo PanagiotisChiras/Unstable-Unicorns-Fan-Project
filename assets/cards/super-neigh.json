@@ -1,0 +1,7 @@
+{
+  "name": "SUPER NEIGH",
+  "cardType": "Instant",
+  "quantity": 1,
+  "effectDescription": "Play this card when any other player tries to play a card. Stop that player's card from being played and send it to the discard pile.This card cannot be neighed."
+
+}

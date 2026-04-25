@@ -1,0 +1,9 @@
+{
+  "name": "TARGETED DESTRUCTION",
+  "cardType": "Magic",
+  "quantity": 3,
+  "effectDescription": "SACRIFICE or DESTROY an Upgrade or Downgrade card.",
+  "effects": {
+    "onPlay" : "TARGETED_DESTRUCTION_EFFECT"
+  }
+}

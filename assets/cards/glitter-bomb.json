@@ -1,0 +1,9 @@
+{
+  "name": "GLITTER BOMB",
+  "cardType": "Upgrade",
+  "quantity": 2,
+  "effectDescription": "If this card is in your Stable at the beginning of your turn, you may SACRIFICE a card. If you do, DESTROY a card.",
+  "effects": {
+    "onBeginningOfTurn" : "GLITTER_BOMB_BOT"
+  }
+}
