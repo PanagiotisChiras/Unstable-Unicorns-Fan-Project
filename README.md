@@ -42,8 +42,8 @@ The engine is built around a custom event system and effect pipeline:
 - C++20 compiler (MSVC / GCC / Clang)
 - CMake 3.20+
 ```bash
-git clone https://github.com/PanagiotisChiras/unstable-unicorns-fan-project.git
-cd unstable-unicorns-fan-project
+git clone https://github.com/PanagiotisChiras/Unstable-Unicorns-Fan-Project.git
+cd Unstable-Unicorns-Fan-Project
 cmake -B build
 cmake --build build
 ./build/Unstable_Unicorns
