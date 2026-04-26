@@ -9,12 +9,15 @@
 
 struct EntityStable {
 
+    EntityStable() = default;
+    EntityStable(const SharedBoard&) = delete;
+    EntityStable& operator=(const SharedBoard&) = delete;
 
     std::vector<std::unique_ptr<Card>> hand;
     std::vector<std::unique_ptr<Card>> unicornStable;
     std::vector<std::unique_ptr<Card>> modifiers; // upgrade - downgrade cards
     PlayerRestriction playerRestrictions;
-    SharedBoard* board;
+    SharedBoard* board{};
 
      std::string name;
     int actionPoints {1};
