@@ -139,10 +139,10 @@ void Game::initializeDeck() {
             Card card{&cardData};
 
             if (cardData.type == CardType::BABY_UNICORN) {
-                board.nursery.emplace_back(std::make_unique<Card>(card));
+                board.nursery.emplace_back(std::make_unique<Card>(std::move(card)));
             }
             else {
-                board.deck.emplace_back(std::make_unique<Card>(card));
+                board.deck.emplace_back(std::make_unique<Card>(std::move(card)));
             }
         }
 
