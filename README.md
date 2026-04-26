@@ -44,6 +44,7 @@ The engine is built around a custom event system and effect pipeline:
 ```bash
 git clone https://github.com/PanagiotisChiras/Unstable-Unicorns-Fan-Project.git C:\User\UserName\Desktop\ProjectName
 the above after C: is an example, replace it with where you want to place this project and the project Name you wish.
+after that just open the project.
 
 ```
  
