@@ -10,8 +10,8 @@
 struct EntityStable {
 
     EntityStable() = default;
-    EntityStable(const SharedBoard&) = delete;
-    EntityStable& operator=(const SharedBoard&) = delete;
+    EntityStable(EntityStable&&) = default;
+    EntityStable& operator=(EntityStable&&) = default;
 
     std::vector<std::unique_ptr<Card>> hand;
     std::vector<std::unique_ptr<Card>> unicornStable;
