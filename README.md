@@ -46,7 +46,7 @@ git clone https://github.com/PanagiotisChiras/Unstable-Unicorns-Fan-Project.git
 cd Unstable-Unicorns-Fan-Project
 cmake -B build
 cmake --build build
-./build/Unstable_Unicorns
+./build/Unstable_Unicorns.exe
 ```
  
 ---
