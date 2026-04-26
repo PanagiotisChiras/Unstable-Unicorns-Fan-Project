@@ -166,10 +166,13 @@ void ConsoleUI::handleActionPhase() {
     std::vector<LegalActions> playableWithoutInstants;
 
     for (auto& action : actions) {
-        if (action.type == ActionType::DRAW_CARD) canDrawCard = true;
+        if (action.type == ActionType::DRAW_CARD) {
+            canDrawCard = true;
+            continue;;
+        }
         if (action.card) {
             if (action.card->cardData->type != CardType::INSTANT) {
-                playableWithoutInstants.emplace_back(action);
+                playableWithoutInstants.push_back(action);
             }
             playable.push_back(action);
         }
@@ -178,12 +181,12 @@ void ConsoleUI::handleActionPhase() {
 
    for (std::size_t i = 0; i < playableWithoutInstants.size(); ++i) {
 
-       if (const auto card = playableWithoutInstants[i].card) {
-           std::string_view cardType = CardUtils::cardTypeToString(card->cardData->type);
+       const auto card = playableWithoutInstants[i].card ;
 
-           std::cout << "[" << i + 1 << "] " << card->cardData->name
+       std::string_view cardType = CardUtils::cardTypeToString(card->cardData->type);
+
+           std::cout <<  "[" <<  i + 1    << "] " << card->cardData->name
                      << " ["  << cardType << "]"<< std::endl;
-       }
 
    }
 
@@ -208,6 +211,7 @@ void ConsoleUI::handleActionPhase() {
         std::cout << "There are no More Legal Actions You can do , Ending Action Phase\n\n";
         return;
     }
+
     int choice;
     std::cin >> choice;
     while ((choice == 0 && !canDrawCard) || choice < 0 || choice > static_cast<int>(playableWithoutInstants.size())) {
@@ -225,7 +229,27 @@ void ConsoleUI::handleActionPhase() {
 
     else {
 
-        Card* cardPtr = (playable[choice].card);
+        // messy but works...
+
+        std::cout << "Do you want to:\n(1)[PLAY]\n(2)[DESCRIPTION]\n->";
+        int input{};
+        std::cin >> input;
+
+        while (input > 2 || input < 1) {
+            std::cout << "Invalid Index, Try again\n";
+            std::cin >> input;
+        }
+        while (input == 2) {
+            std::cout << playableWithoutInstants[choice].card->cardData->effectDescription << std::endl;
+            std::cout << "Do you want to:\n(1)[PLAY]\n(2)[DESCRIPTION]\n->";
+            std::cin >> input;
+            while (input > 2 || input < 1) {
+                std::cout << "Invalid Index, Try again\n";
+                std::cin >> input;
+            }
+        }
+
+        Card* cardPtr = playableWithoutInstants[choice].card;
         CardType type = cardPtr->cardData->type;
 
 

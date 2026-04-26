@@ -28,16 +28,15 @@ public:
 
  bool gameRunning = true;
 private:
-    EventDispatcher dispatcher;
-    Stable          stable;
-    std::unique_ptr<ConsoleUI> console;
-    EffectSystem    effectSystem;
-    EffectRegistry  registry;
-    SharedBoard     board;
-    GamePhase       currentPhase{GamePhase::BEGINNING_OF_TURN_PHASE};
-    ChoiceManager   manager;
-    EntityStable*   activePlayer;
-
+EventDispatcher dispatcher;
+Stable          stable;
+EffectRegistry  registry;
+ChoiceManager   manager;
+std::unique_ptr<ConsoleUI> console;
+EffectSystem    effectSystem;
+SharedBoard     board;
+GamePhase       currentPhase{GamePhase::BEGINNING_OF_TURN_PHASE};
+EntityStable*   activePlayer;
 
     std::unordered_map<std::string,CardData> cardDatabase;
     ListenerHandle phaseHandle;
