@@ -42,11 +42,9 @@ The engine is built around a custom event system and effect pipeline:
 - C++20 compiler (MSVC / GCC / Clang)
 - CMake 3.20+
 ```bash
-git clone https://github.com/PanagiotisChiras/Unstable-Unicorns-Fan-Project.git
-cd Unstable-Unicorns-Fan-Project
-cmake -B build
-cmake --build build
-./build/Unstable_Unicorns.exe
+git clone https://github.com/PanagiotisChiras/Unstable-Unicorns-Fan-Project.git C:\User\UserName\Desktop\ProjectName
+the above after C: is an example, replace it with where you want to place this project and the project Name you wish.
+
 ```
  
 ---
