@@ -65,3 +65,9 @@ add_executable(Unstable_Unicorns main.cpp
         effects/cardEffects/UpgradeCardEffects.cpp
         effects/cardEffects/DowngradeCardEffects.hpp
         effects/cardEffects/DowngradeCardEffects.cpp)
+
+add_custom_command(TARGET Unstable_Unicorns POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        ${CMAKE_SOURCE_DIR}/assets
+        $<TARGET_FILE_DIR:Unstable_Unicorns>/assets
+)
