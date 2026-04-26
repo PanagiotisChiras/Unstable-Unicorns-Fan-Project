@@ -9,7 +9,6 @@
 
 struct EntityStable {
 
-    EntityStable() = default;
     EntityStable(EntityStable&&) = default;
     EntityStable& operator=(EntityStable&&) = default;
 
