@@ -153,7 +153,6 @@ void ConsoleUI::handleActionPhase() {
     std::cout << "--ACTION-PHASE--\n\n";
     std::cout << "You Can Do One Of The Following:\n";
 
-    //TODO: make card selection without cin and with ChoiceRequest
 
     std::vector<EntityStable*> players;
 
@@ -164,33 +163,49 @@ void ConsoleUI::handleActionPhase() {
     std::vector<LegalActions> actions = getLegalActions();
     bool canDrawCard = false;
     std::vector<LegalActions> playable;
+    std::vector<LegalActions> playableWithoutInstants;
 
     for (auto& action : actions) {
         if (action.type == ActionType::DRAW_CARD) canDrawCard = true;
         if (action.card) {
+            if (action.card->cardData->type != CardType::INSTANT) {
+                playableWithoutInstants.emplace_back(action);
+            }
             playable.push_back(action);
         }
     }
 
-   for (std::size_t i = 0; i < playable.size(); ++i) {
-       auto card = playable[i].card;
-       if (card) {
+
+   for (std::size_t i = 0; i < playableWithoutInstants.size(); ++i) {
+
+       if (const auto card = playableWithoutInstants[i].card) {
            std::cout << "[" << i + 1 << "] " << card->cardData->name << std::endl;
        }
-       if (playable[i].type == ActionType::DRAW_CARD) {
-           canDrawCard = true;
-       }
+
    }
-    if (canDrawCard) {
+
+      if (canDrawCard) {
         std::cout << "[0] Draw a Card\n";
     }
+
+
+    std::cout << "\n---VIEW ONLY CARDS---\n";
+
+    for (const auto& action : playable) {
+        if (const CardData* cardData = action.card->cardData; cardData->type == CardType::INSTANT) {
+            std::cout << cardData->name << std::endl;
+        }
+    }
+
+    std::cout << "---------------------\n->";
+
     if (!canDrawCard && playable.empty()) {
         std::cout << "There are no More Legal Actions You can do , Ending Action Phase\n\n";
         return;
     }
     int choice;
     std::cin >> choice;
-    while ((choice == 0 && !canDrawCard) || choice < 0 || choice > static_cast<int>(playable.size())) {
+    while ((choice == 0 && !canDrawCard) || choice < 0 || choice > static_cast<int>(playableWithoutInstants.size())) {
         std::cout << "Invalid Index, Try again\n";
         std::cin >> choice;
     }

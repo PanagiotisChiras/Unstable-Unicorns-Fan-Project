@@ -39,7 +39,9 @@ namespace NeighUtils {
         };
 
         bool allPlayersSaidNoToNeigh = chain->currentIndex >= chain->players.size();
+
         if (chain->currentIndex == 0) std::cout << "------------------\n";
+
         std::cout << "Current Index : " << chain->currentIndex << std::endl;
         std::cout << "Player size is : " << chain->players.size() << std::endl;
 
@@ -128,8 +130,14 @@ namespace NeighUtils {
             .cardOptions = {},
             .playerOptions = {},
             .prompt = std::move(prompt),
-            .callback = [activePlayer,chain,manager,dispatcher,handleNeighResolution](ChoiceResult yesNoResult) {
+            .callback = [activePlayer,chain,manager,dispatcher,hasNeigh,handleNeighResolution](ChoiceResult yesNoResult) {
 
+                if (!hasNeigh(activePlayer)) {
+                    std::cout << activePlayer->name << " cannot play a Neigh, going to the next Player\n";
+                    ++chain->currentIndex;
+                    resolveNeighChain(chain,manager,dispatcher);
+                    return;
+                }
                 std::cout << "yesNo has value: " << yesNoResult.yesNo.has_value() << "\n";
                 if (yesNoResult.yesNo.value() == false) {
                     std::cout << activePlayer->name << " said no to Playing a Neigh\n";
