@@ -160,15 +160,12 @@ void Game::initializePlayers(std::size_t amount) {
     for (std::size_t i = 0; i < amount; ++i) {
 
 
-        EntityStable player{
-             .hand = {},
-            .unicornStable = {},
-            .modifiers = {},
-            .playerRestrictions = {},
-            .board = &board,
-            .name = "PLAYER " + std::to_string(i+1),
-            .actionPoints = 1,
-        };
+
+        EntityStable player;
+        player.name = "PLAYER " + std::to_string(i+1);
+        player.actionPoints = 1;
+        player.board = &board;
+
                 player.unicornStable.emplace_back(std::move(player.board->nursery.back()));
 
                 player.board->nursery.pop_back();

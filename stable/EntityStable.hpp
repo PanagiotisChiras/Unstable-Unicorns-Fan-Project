@@ -9,9 +9,6 @@
 
 struct EntityStable {
 
-    EntityStable(EntityStable&&) = default;
-    EntityStable& operator=(EntityStable&&) = default;
-
     std::vector<std::unique_ptr<Card>> hand;
     std::vector<std::unique_ptr<Card>> unicornStable;
     std::vector<std::unique_ptr<Card>> modifiers; // upgrade - downgrade cards
