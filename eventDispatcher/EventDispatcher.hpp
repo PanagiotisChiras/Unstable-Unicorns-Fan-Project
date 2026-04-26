@@ -6,6 +6,7 @@
 #include <memory>
 #include <typeindex>
 #include "ListenerHandle.hpp"
+#include <algorithm>
 
 class EventDispatcher {
 public:
