@@ -25,7 +25,7 @@ EffectSystem::EffectSystem(EventDispatcher *dispatcher, EffectRegistry *registry
 
         auto it = effectMap.find("onEnter");
         if (it == effectMap.end()) return;
-            std::cout << "CARD ENTERED: " << e.entered->cardData->name << " to: " << e.to->name << "\n";
+            // std::cout << "CARD ENTERED: " << e.entered->cardData->name << " to: " << e.to->name << "\n";
 
 
         EffectContext ctx{this->stable,this->choiceManager};
@@ -43,7 +43,7 @@ EffectSystem::EffectSystem(EventDispatcher *dispatcher, EffectRegistry *registry
     systemHandles.push_back(dispatcher->listenFor<CardLeftStableEvent>
         ([this](const CardLeftStableEvent& e) {
             if (auto* owner = StableUtils::findEntityStableWithId(*this->stable, e.left->uid)) return;
-            std::cout << "DEBUG EffectSystem CardLeftStable firing for " << e.left->cardData->name << "\n";
+            // std::cout << "DEBUG EffectSystem CardLeftStable firing for " << e.left->cardData->name << "\n";
             activeEffects.erase(e.left->uid);
     },0));
 
@@ -101,12 +101,12 @@ EffectSystem::EffectSystem(EventDispatcher *dispatcher, EffectRegistry *registry
 
                     }
                 }
-                std::cout << "INSIDE EFFECT SYSTEM PHASE CHANGED EVENT\n";
-
+                // std::cout << "INSIDE EFFECT SYSTEM PHASE CHANGED EVENT\n";
+                   std::cout << "Beginning of Turn\n";
                 int activeIndex = this->stable->activeIndex;
 
                 auto mandatoryOnComplete = [this,e,botOptionalCards,activeIndex]() {
-                    std::cout << "BOT OPTIONAL CARD COUNT: " << botOptionalCards.size() << std::endl;
+                    // std::cout << "BOT OPTIONAL CARD COUNT: " << botOptionalCards.size() << std::endl;
 
                     auto& activePlayer = this->stable->players[activeIndex];
                 BOTResolutionContext botResolution = {

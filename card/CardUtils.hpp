@@ -5,12 +5,15 @@
 #include "stable/Stable.hpp"
 
 namespace CardUtils {
+    std::string_view cardTypeToString(CardType type);
     bool isUnicorn(const Card& card);
     std::vector<Card*> getSacrificeOptions(EntityStable& owner);
     std::vector<Card*> getDestroyOptions(EntityStable& owner,Stable& stable);
     std::vector<Card*> getDiscardOptions(EntityStable& owner);
     std::vector<EntityStable*> getAllPlayerOptions(Stable& stable);
     std::vector<EntityStable*> getPlayerOptionsExceptYourself(EntityStable& yourself,Stable& stable);
+
+
 
 }
 

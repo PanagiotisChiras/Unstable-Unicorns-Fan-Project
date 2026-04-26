@@ -6,7 +6,7 @@
 
 void ChoiceManager::add(ChoiceRequest request) {
     _pending.push(std::move(request));
-    std::cout << "CHOICE ADDED, publishing event\n";
+    // std::cout << "CHOICE ADDED, publishing event\n";
     ChoiceAddedEvent e;
    dispatcher->publish(e);
 }

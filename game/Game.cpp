@@ -49,7 +49,7 @@ void Game::giveCardTo(std::size_t amount, EntityStable &to) {
             std::cout << "Cant give " << to.name << " A Card, Deck is Empty\n";
             break;
         }
-        std::cout << board.deck.back()->cardData->name << std::endl;
+        std::cout << to.name << " Drew a " << board.deck.back()->cardData->name << std::endl;
         to.hand.emplace_back(std::move(board.deck.back()));
         board.deck.pop_back();
     }
@@ -64,7 +64,7 @@ void Game::resolveTurn() {
             auto& activePlayer = stable.players[stable.activeIndex];
             std::cout << activePlayer.name << "'s TURN\n";
             console->displayState();
-            std::cout << "PHASE CHANGED\n";
+            // std::cout << "PHASE CHANGED\n";
 
            if (phase.to == GamePhase::DRAW_PHASE) {
                 if (board.deck.empty()) nextPhase();

@@ -56,14 +56,14 @@ namespace {
 
                 function(result.selectedCard,owner,cardSource);
 
-                std::cout << "REMAINING BEFORE: " << *remaining << std::endl;
+                // std::cout << "REMAINING BEFORE: " << *remaining << std::endl;
                 --(*remaining);
                 (*askNext)();
                 ChoiceAddedEvent e;
                 dispatcherPtr->publish(e);
             };
             manager->add(std::move(request));
-            std::cout << "PUSHED REQUEST, pending: " << manager->hasPending() << std::endl;
+            // std::cout << "PUSHED REQUEST, pending: " << manager->hasPending() << std::endl;
 
         };
 
@@ -350,14 +350,11 @@ namespace ChoiceUtils {
 
                            --(*cardsAmount);
                            if (*cardsAmount <= 0) {
-                               // ChoiceAddedEvent e;
-                               // botResolutionShared->dispatcher->publish(e);
 
                                botResolutionShared->onComplete();
                            } else {
                                (*next)();
-                               // ChoiceAddedEvent e;
-                               // botResolutionShared->dispatcher->publish(e);
+
                            }
 
                        }

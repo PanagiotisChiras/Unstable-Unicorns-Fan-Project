@@ -179,7 +179,10 @@ void ConsoleUI::handleActionPhase() {
    for (std::size_t i = 0; i < playableWithoutInstants.size(); ++i) {
 
        if (const auto card = playableWithoutInstants[i].card) {
-           std::cout << "[" << i + 1 << "] " << card->cardData->name << std::endl;
+           std::string_view cardType = CardUtils::cardTypeToString(card->cardData->type);
+
+           std::cout << "[" << i + 1 << "] " << card->cardData->name
+                     << " ["  << cardType << "]"<< std::endl;
        }
 
    }
@@ -192,8 +195,10 @@ void ConsoleUI::handleActionPhase() {
     std::cout << "\n---VIEW ONLY CARDS---\n";
 
     for (const auto& action : playable) {
+        std::string_view cardType = CardUtils::cardTypeToString(action.card->cardData->type);
+
         if (const CardData* cardData = action.card->cardData; cardData->type == CardType::INSTANT) {
-            std::cout << cardData->name << std::endl;
+            std::cout << cardData->name << " [" << cardType << "]" << std::endl;
         }
     }
 
@@ -217,7 +222,9 @@ void ConsoleUI::handleActionPhase() {
     if (choice == -1) {
         game.giveCardTo(1,*activePlayerPtr);
     }
+
     else {
+
         Card* cardPtr = (playable[choice].card);
         CardType type = cardPtr->cardData->type;
 

@@ -3,6 +3,21 @@
 
 
 namespace CardUtils {
+    std::string_view cardTypeToString(CardType type) {
+        switch (type) {
+            case CardType::BABY_UNICORN:   return "Baby Unicorn";
+            case CardType::BASIC_UNICORN:  return "Basic Unicorn";
+            case CardType::MAGIC_UNICORN:  return "Magic Unicorn";
+            case CardType::DOWNGRADE:      return "Downgrade";
+            case CardType::UPGRADE:        return "Upgrade";
+            case CardType::INSTANT:        return "Instant";
+            case CardType::MAGIC:          return "Magic";
+            default:                       return "Unknown";
+        }
+    }
+
+
+
     bool isUnicorn(const Card &card) {
 
         return  card.cardData->type == CardType::BASIC_UNICORN ||
